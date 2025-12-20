@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Техника для дома - Магазин бытовой техники</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Техника<span>Дома</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#categories">Категории</a></li>
+                <li><a href="#washing-machines">Стиральные машины</a></li>
+                <li><a href="#vacuums">Пылесосы</a></li>
+                <li><a href="#tvs">Телевизоры</a></li>
+                <li><a href="#kitchen">Техника для кухни</a></li>
+                <li><a href="#microwaves">Микроволновки</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#cart" class="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой секция -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Бытовая техника для вашего дома</h1>
+                <p>Качественная техника по доступным ценам с доставкой и гарантией</p>
+                <a href="#categories" class="btn">Смотреть каталог</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Категории -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Категории техники</h2>
+            <div class="categories-grid">
+                <a href="#washing-machines" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Стиральные машины</h3>
+                    <p>Автоматические и полуавтоматические</p>
+                </a>
+                <a href="#vacuums" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3>Пылесосы</h3>
+                    <p>Моющие, роботы-пылесосы</p>
+                </a>
+                <a href="#tvs" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3>Телевизоры</h3>
+                    <p>Smart TV, 4K, OLED</p>
+                </a>
+                <a href="#kitchen" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-blender"></i>
+                    </div>
+                    <h3>Техника для кухни</h3>
+                    <p>Холодильники, плиты, вытяжки</p>
+                </a>
+                <a href="#microwaves" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Микроволновки</h3>
+                    <p>Соло, гриль, инверторные</p>
+                </a>
+                <a href="#all-products" class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Вся техника</h3>
+                    <p>Полный каталог товаров</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Стиральные машины -->
+    <section class="products-section" id="washing-machines">
+        <div class="container">
+            <h2 class="section-title">Стиральные машины</h2>
+            <div class="products-grid">
+                <!-- Товары будут добавлены через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Пылесосы -->
+    <section class="products-section" id="vacuums">
+        <div class="container">
+            <h2 class="section-title">Пылесосы</h2>
+            <div class="products-grid">
+                <!-- Товары будут добавлены через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Телевизоры -->
+    <section class="products-section" id="tvs">
+        <div class="container">
+            <h2 class="section-title">Телевизоры</h2>
+            <div class="products-grid">
+                <!-- Товары будут добавлены через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Техника для кухни -->
+    <section class="products-section" id="kitchen">
+        <div class="container">
+            <h2 class="section-title">Техника для кухни</h2>
+            <div class="products-grid">
+                <!-- Товары будут добавлены через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Микроволновки -->
+    <section class="products-section" id="microwaves">
+        <div class="container">
+            <h2 class="section-title">Микроволновые печи</h2>
+            <div class="products-grid">
+                <!-- Товары будут добавлены через JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">О нашем магазине</h2>
+                <p>Мы специализируемся на продаже качественной бытовой техники известных брендов. Наша цель - сделать ваш дом уютным и современным с помощью надежной техники по оптимальным ценам.</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Гарантия 2 года</h4>
+                        <p>На всю технику</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-truck"></i>
+                        <h4>Бесплатная доставка</h4>
+                        <p>По городу</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-tools"></i>
+                        <h4>Сервисный центр</h4>
+                        <p>Свой ремонт</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Рассрочка</h4>
+                        <p>0% на 6 месяцев</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-user"></i>
+                        <div>
+                            <h4>Менеджер</h4>
+                            <p>Александр</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Телефон</h4>
+                            <p>+375 (29) 311-11-61</p>
+                            <p>Ежедневно с 9:00 до 20:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Адрес магазина</h4>
+                            <p>ул. Карповича, 28</p>
+                            <p>Ролет номер 10</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Режим работы</h4>
+                            <p>Пн-Пт: 10:00 - 19:00</p>
+                            <p>Сб-Вс: 10:00 - 18:00</p>
+                        </div>
+                    </div>
+                    <div class="map-placeholder">
+                        <h4>Мы на карте:</h4>
+                        <p>📍 ул. Карповича, 28, ролет 10</p>
+                        <p>Рядом с остановкой "Карповича"</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Заказать звонок</h3>
+                    <form id="contactForm">
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="tel" placeholder="Ваш телефон" required pattern="\+375\s?[0-9]{2}\s?[0-9]{3}-?[0-9]{2}-?[0-9]{2}" title="Формат: +375 XX XXX-XX-XX">
+                        <select required>
+                            <option value="" disabled selected>Выберите технику</option>
+                            <option>Стиральная машина</option>
+                            <option>Пылесос</option>
+                            <option>Телевизор</option>
+                            <option>Холодильник</option>
+                            <option>Микроволновка</option>
+                            <option>Плита</option>
+                            <option>Другое</option>
+                        </select>
+                        <textarea placeholder="Комментарий" rows="4"></textarea>
+                        <button type="submit" class="btn">Заказать звонок</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ТехникаДома</h3>
+                    <p>Магазин качественной бытовой техники с 2015 года</p>
+                    <p>ИП Александр</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Категории</h3>
+                    <ul>
+                        <li><a href="#washing-machines">Стиральные машины</a></li>
+                        <li><a href="#vacuums">Пылесосы</a></li>
+                        <li><a href="#tvs">Телевизоры</a></li>
+                        <li><a href="#kitchen">Техника для кухни</a></li>
+                        <li><a href="#microwaves">Микроволновки</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +375 (29) 311-11-61</li>
+                        <li><i class="fas fa-map-marker-alt"></i> ул. Карповича, 28</li>
+                        <li>Ролет номер 10</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i> ВКонтакте</a>
+                        <a href="#"><i class="fab fa-telegram"></i> Telegram</a>
+                        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    </div>
+                    <div class="whatsapp-link">
+                        <a href="https://wa.me/375293111161" target="_blank">
+                            <i class="fab fa-whatsapp"></i> WhatsApp: +375 (29) 311-11-61
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 "ТехникаДома". Все права защищены.</p>
+                <p>Телефон: +375 (29) 311-11-61 | Адрес: ул. Карповича, 28, ролет 10</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Корзина (модальное окно) -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Корзина</h3>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Товары в корзине -->
+            </div>
+            <div class="cart-total">
+                <p>Итого: <span id="cartTotal">0</span> руб.</p>
+                <button class="btn" onclick="checkout()">Оформить заказ</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
