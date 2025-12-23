@@ -1,55 +1,6 @@
-// Данные товаров по категориям
-const productsData = {
-    'washing-machines': [
-        {
-            id: 101,
-            name: "Стиральная машина LG F2J3NS0W",
-            price: 84990,
-            category: "Стиральные машины",
-            icon: "fas fa-tshirt",
-            features: ["Загрузка 6 кг", "1200 об/мин", "Сушка", "Инверторный мотор"]
-        },
-        {
-            id: 102,
-            name: "Samsung WW65K52E69S",
-            price: 62990,
-            category: "Стиральные машины",
-            icon: "fas fa-tshirt",
-            features: ["Загрузка 6.5 кг", "1200 об/мин", "Eco Bubble", "Digital Inverter"]
-        },
-        {
-            id: 103,
-            name: "Indesit IWSC 5105 CIS",
-            price: 32990,
-            category: "Стиральные машины",
-            icon: "fas fa-tshirt",
-            features: ["Загрузка 5 кг", "1000 об/мин", "15 программ", "Защита от протечек"]
-        },
-        {
-            id: 104,
-            name: "Bosch WAN 20060",
-            price: 45990,
-            category: "Стиральные машины",
-            icon: "fas fa-tshirt",
-            features: ["Загрузка 6 кг", "1000 об/мин", "ActiveWater", "AntiVibration"]
-        }
-    ],
-    'vacuums': [
-        {
-            id: 201,
-            name: "Пылесос моющий Karcher SE 4002",
-            price: 28990,
-            category: "Пылесосы",
-            icon: "fas fa-fan",
-            features: ["Моющий", "Контейнер 12 л", "Мощность 1400 Вт", "Аквафильтр"]
-        },
-        {
-            id: 202,
-            name: "Робот-пылесос Xiaomi Mi Robot Vacuum",
-            price: 19990,
-            category: "Пылесосы",
-            icon: "fas fa-robot",
-            features: ["Робот", "Навигация LDS", "Управление со смартфона", "Без подзарядки 2.5 ч"]
-        },
-        {
-            id: 203
+document.addEventListener('DOMContentLoaded', function() {
+    // Мобильное меню
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    if
