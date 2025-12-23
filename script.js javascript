@@ -1,6 +1,179 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Мобильное меню
-    const menuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+// Полная база данных товаров для сайта Simens (на основе категорий MediaMax.by)
+const productsDatabase = {
+    // Холодильники и морозильники
+    'fridges': [
+        {
+            id: 1001,
+            name: 'Холодильник Samsung RB33J3200SA',
+            price: 1899,
+            oldPrice: 2099,
+            category: 'Для кухни',
+            brand: 'Samsung',
+            features: ['No Frost', '352 л', 'Инверторный компрессор', 'A+ энергопотребление'],
+            description: 'Двухкамерный холодильник с системой No Frost. Экономичный и тихий.',
+            image: 'fridge-samsung',
+            rating: 4.7,
+            stock: 5
+        },
+        {
+            id: 1002,
+            name: 'Холодильник Atlant XM 4308-000',
+            price: 1299,
+            category: 'Для кухни',
+            brand: 'Atlant',
+            features: ['280 л', 'Ручная разморозка', 'Электронное управление'],
+            description: 'Надежный однокамерный холодильник белорусского производства.',
+            image: 'fridge-atlant',
+            rating: 4.3,
+            stock: 8
+        },
+        {
+            id: 1003,
+            name: 'Морозильник Beko RCNK335K00W',
+            price: 899,
+            oldPrice: 999,
+            category: 'Для кухни',
+            brand: 'Beko',
+            features: ['85 л', 'No Frost', 'Быстрая заморозка'],
+            description: 'Компактный морозильник для дома и дачи.',
+            image: 'freezer-beko',
+            rating: 4.5,
+            stock: 3
+        }
+    ],
     
-    if
+    // Стиральные машины
+    'washing-machines': [
+        {
+            id: 2001,
+            name: 'Стиральная машина LG F2J3NS0W',
+            price: 1599,
+            oldPrice: 1799,
+            category: 'Для кухни',
+            brand: 'LG',
+            features: ['6 кг', '1200 об/мин', 'Прямой привод', 'Сушка'],
+            description: 'Стиральная машина с функцией сушки. Экономит время и место.',
+            image: 'washer-lg',
+            rating: 4.8,
+            stock: 4
+        },
+        {
+            id: 2002,
+            name: 'Стиральная машина Indesit IWSC 5105',
+            price: 899,
+            category: 'Для кухни',
+            brand: 'Indesit',
+            features: ['5 кг', '1000 об/мин', '15 программ'],
+            description: 'Надежная и простая в управлении стиральная машина.',
+            image: 'washer-indesit',
+            rating: 4.2,
+            stock: 7
+        }
+    ],
+    
+    // Телевизоры
+    'tvs': [
+        {
+            id: 3001,
+            name: 'Телевизор Samsung UE43TU7090U',
+            price: 1299,
+            oldPrice: 1499,
+            category: 'Для дома',
+            brand: 'Samsung',
+            features: ['43"', '4K UHD', 'Smart TV', 'HDR'],
+            description: 'Телевизор с кристально четким изображением 4K.',
+            image: 'tv-samsung',
+            rating: 4.6,
+            stock: 6
+        },
+        {
+            id: 3002,
+            name: 'Телевизор LG 43UP75006LF',
+            price: 1199,
+            category: 'Для дома',
+            brand: 'LG',
+            features: ['43"', '4K', 'webOS', 'AI Sound'],
+            description: 'Умный телевизор с платформой webOS и голосовым управлением.',
+            image: 'tv-lg',
+            rating: 4.7,
+            stock: 5
+        }
+    ],
+    
+    // Микроволновые печи
+    'microwaves': [
+        {
+            id: 4001,
+            name: 'Микроволновка Samsung MG23K3515AK',
+            price: 299,
+            category: 'Для кухни',
+            brand: 'Samsung',
+            features: ['23 л', 'Гриль', 'Инверторная технология'],
+            description: 'Микроволновка с функцией гриля и равномерным нагревом.',
+            image: 'microwave-samsung',
+            rating: 4.4,
+            stock: 9
+        }
+    ],
+    
+    // Пылесосы
+    'vacuums': [
+        {
+            id: 5001,
+            name: 'Пылесос моющий Karcher SE 4002',
+            price: 499,
+            oldPrice: 599,
+            category: 'Для дома',
+            brand: 'Karcher',
+            features: ['Моющий', 'Аквафильтр', '1400 Вт'],
+            description: 'Моющий пылесос для идеальной чистоты ковров и полов.',
+            image: 'vacuum-karcher',
+            rating: 4.5,
+            stock: 4
+        },
+        {
+            id: 5002,
+            name: 'Робот-пылесос Xiaomi Mi Robot',
+            price: 799,
+            category: 'Для дома',
+            brand: 'Xiaomi',
+            features: ['LDS навигация', 'Управление со смартфона'],
+            description: 'Умный робот-пылесос, который убирается сам.',
+            image: 'vacuum-xiaomi',
+            rating: 4.8,
+            stock: 2
+        }
+    ],
+    
+    // Электросамокаты
+    'scooters': [
+        {
+            id: 6001,
+            name: 'Электросамокат Xiaomi Mi Electric Scooter 3',
+            price: 899,
+            category: 'Мобильность',
+            brand: 'Xiaomi',
+            features: ['30 км пробег', '25 км/ч', 'Складной'],
+            description: 'Популярный электросамокат для городских поездок.',
+            image: 'scooter-xiaomi',
+            rating: 4.6,
+            stock: 3
+        }
+    ],
+    
+    // Кондиционеры
+    'conditioners': [
+        {
+            id: 7001,
+            name: 'Кондиционер Samsung AR09TYHQBWK',
+            price: 1299,
+            category: 'Для дома',
+            brand: 'Samsung',
+            features: ['Инвертор', 'Wi-Fi', '9 000 BTU'],
+            description: 'Сплит-система с инверторным компрессором для экономии энергии.',
+            image: 'ac-samsung',
+            rating: 4.7,
+            stock: 3
+        }
+    ]
+};
