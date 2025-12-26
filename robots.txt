@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://serd1t0.github.io/simens/sitemap.xml
+Sitemap: https://serd1t0.github.io/Simens.by/sitemap.xml
