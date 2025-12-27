@@ -16,7 +16,209 @@
 <body>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head> 
-<body>
+<body><!-- Каталог товаров -->
+<section id="catalog" style="display: none; padding: 40px 20px; background: #f8f9fa;">
+  <div class="catalog-header">
+    <h2>Каталог товаров</h2>
+    <div class="catalog-controls">
+      <button onclick="showAllProducts()" style="padding: 10px 20px; background: #007bff; color: white; border: none; border-radius: 5px; margin: 5px;">Все товары</button>
+      <button onclick="filterProducts('Для кухни')" style="padding: 10px 20px; background: #6c757d; color: white; border: none; border-radius: 5px; margin: 5px;">Для кухни</button>
+      <button onclick="filterProducts('Для дома')" style="padding: 10px 20px; background: #6c757d; color: white; border: none; border-radius: 5px; margin: 5px;">Для дома</button>
+      <button onclick="filterProducts('Мобильность')" style="padding: 10px 20px; background: #6c757d; color: white; border: none; border-radius: 5px; margin: 5px;">Мобильность</button>
+    </div>
+    <div id="product-counter" style="margin: 20px 0; font-weight: bold;"></div>
+  </div>
+  
+  <div id="products-container" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
+    <!-- Товары появятся здесь -->
+  </div>
+</section>
+
+<!-- Простой JavaScript прямо в HTML -->
+<script>
+// Данные товаров (минимум для теста)
+const products = [
+  {
+    id: 1,
+    name: "Холодильник Samsung RB37A520NSA",
+    category: "Для кухни",
+    price: 2249,
+    oldPrice: 2499,
+    brand: "Samsung",
+    description: "Двухкамерный холодильник с системой No Frost",
+    image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=300&fit=crop",
+    inStock: true,
+    isSale: true
+  },
+  {
+    id: 2,
+    name: "Стиральная машина LG F2J3WS2W",
+    category: "Для кухни",
+    price: 1599,
+    brand: "LG",
+    description: "Фронтальная загрузка 6 кг с прямым приводом",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop",
+    inStock: true,
+    isSale: false
+  },
+  {
+    id: 3,
+    name: "Телевизор LG 55NANO766QA",
+    category: "Для дома",
+    price: 1899,
+    brand: "LG",
+    description: "Телевизор 55 дюймов с разрешением 4K",
+    image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=300&fit=crop",
+    inStock: true,
+    isSale: false
+  },
+  {
+    id: 4,
+    name: "Электросамокат Xiaomi Mi Electric Scooter 3",
+    category: "Мобильность",
+    price: 799,
+    oldPrice: 899,
+    brand: "Xiaomi",
+    description: "Электросамокат с запасом хода до 30 км",
+    image: "https://images.unsplash.com/photo-1579445710183-f9a8161a6c9c?w=400&h=300&fit=crop",
+    inStock: true,
+    isSale: true
+  }
+];
+
+// Показываем каталог
+function showCatalog() {
+  document.getElementById('catalog').style.display = 'block';
+  showAllProducts();
+}
+
+// Показываем все товары
+function showAllProducts() {
+  displayProducts(products);
+  updateButtons('all');
+}
+
+// Фильтруем по категории
+function filterProducts(category) {
+  const filtered = products.filter(p => p.category === category);
+  displayProducts(filtered);
+  updateButtons(category);
+}
+
+// Отображаем товары
+function displayProducts(productsToShow) {
+  const container = document.getElementById('products-container');
+  container.innerHTML = '';
+  
+  productsToShow.forEach(product => {
+    const oldPriceHTML = product.oldPrice ? 
+      `<div style="text-decoration: line-through; color: #999;">${product.oldPrice} руб.</div>` : '';
+    
+    const saleBadge = product.isSale ? 
+      '<div style="position: absolute; top: 10px; right: 10px; background: red; color: white; padding: 5px 10px; border-radius: 3px;">АКЦИЯ</div>' : '';
+    
+    const productHTML = `
+      <div style="background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.1); position: relative;">
+        ${saleBadge}
+        <img src="${product.image}" alt="${product.name}" style="width: 100%; height: 200px; object-fit: cover;">
+        <div style="padding: 15px;">
+          <div style="color: #666; font-size: 12px; margin-bottom: 5px;">${product.brand}</div>
+          <h3 style="margin: 0 0 10px 0; font-size: 16px;">${product.name}</h3>
+          <p style="color: #666; font-size: 14px; margin-bottom: 15px;">${product.description}</p>
+          ${oldPriceHTML}
+          <div style="font-size: 20px; font-weight: bold; color: #333; margin: 10px 0;">${product.price} руб.</div>
+          <button onclick="addToCart(${product.id})" style="width: 100%; padding: 10px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">В корзину</button>
+        </div>
+      </div>
+    `;
+    
+    container.innerHTML += productHTML;
+  });
+  
+  document.getElementById('product-counter').textContent = `Найдено товаров: ${productsToShow.length}`;
+  
+  // Прокручиваем к каталогу
+  document.getElementById('catalog').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Обновляем активные кнопки
+function updateButtons(activeCategory) {
+  const buttons = document.querySelectorAll('.catalog-controls button');
+  buttons.forEach(btn => {
+    if (btn.textContent.includes(activeCategory) || (activeCategory === 'all' && btn.textContent === 'Все товары')) {
+      btn.style.background = '#007bff';
+    } else {
+      btn.style.background = '#6c757d';
+    }
+  });
+}
+
+// Добавляем в корзину
+function addToCart(productId) {
+  const product = products.find(p => p.id === productId);
+  alert(`"${product.name}" добавлен в корзину!`);
+}
+
+// Изменяем все ссылки в категориях
+document.addEventListener('DOMContentLoaded', function() {
+  // Меняем все ссылки в категориях
+  const categoryLinks = document.querySelectorAll('.category-item a');
+  categoryLinks.forEach(link => {
+    // Сохраняем текст ссылки
+    const text = link.textContent;
+    
+    // Меняем ссылку на вызов функции
+    if (text.includes('Для кухни')) {
+      link.href = 'javascript:void(0)';
+      link.onclick = function() { 
+        showCatalog(); 
+        filterProducts('Для кухни');
+      };
+    } else if (text.includes('Для дома')) {
+      link.href = 'javascript:void(0)';
+      link.onclick = function() { 
+        showCatalog(); 
+        filterProducts('Для дома');
+      };
+    } else if (text.includes('Мобильность')) {
+      link.href = 'javascript:void(0)';
+      link.onclick = function() { 
+        showCatalog(); 
+        filterProducts('Мобильность');
+      };
+    } else {
+      // Для подкатегорий - показываем все товары из основной категории
+      link.href = 'javascript:void(0)';
+      link.onclick = function() { 
+        showCatalog();
+        
+        // Определяем основную категорию по тексту
+        if (text.includes('Холодильник') || text.includes('Стиральная') || 
+            text.includes('Посудомоечная') || text.includes('Электроплит') ||
+            text.includes('Микроволновая')) {
+          filterProducts('Для кухни');
+        } else if (text.includes('Телевизор') || text.includes('Кондиционер') ||
+                   text.includes('Пылесос') || text.includes('Обогреватель')) {
+          filterProducts('Для дома');
+        } else if (text.includes('Электросамокат') || text.includes('Электровелосипед')) {
+          filterProducts('Мобильность');
+        } else {
+          showAllProducts();
+        }
+      };
+    }
+  });
+  
+  // Добавляем иконку корзины
+  const cartIcon = document.createElement('div');
+  cartIcon.innerHTML = `
+    <div style="position: fixed; top: 20px; right: 20px; background: white; padding: 10px 20px; border-radius: 25px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); z-index: 100;">
+      <a href="#catalog" onclick="showCatalog(); showAllProducts();" style="text-decoration: none; color: #333; font-weight: bold;">🛒 Показать все товары</a>
+    </div>
+  `;
+  document.body.appendChild(cartIcon);
+});
+</script>
     <!-- Хедер -->
     <header class="header">
         <div class="header-top">
