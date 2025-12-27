@@ -2,159 +2,731 @@
   "products": [
     {
       "id": 1,
-      "name": "Холодильник Siemens CoolMaster 320",
+      "name": "Холодильник Samsung RB37A520NSA",
       "category": "Для кухни",
       "subcategory": "Холодильники и морозильники",
-      "price": 2599,
-      "oldPrice": 2899,
-      "brand": "Siemens",
-      "description": "Двухкамерный холодильник с системой NoFrost. Сохраняет свежесть продуктов благодаря зоне нулевой температуры.",
+      "price": 2249,
+      "oldPrice": 2499,
+      "brand": "Samsung",
+      "description": "Двухкамерный холодильник с системой No Frost. Дигитроник инверторный компрессор.",
       "features": {
         "Тип": "Двухкамерный",
-        "NoFrost": "Да",
-        "Общий объём": "320 л",
-        "Класс энергопотребления": "A++",
-        "Цвет": "Нержавеющая сталь"
+        "No Frost": "Да",
+        "Общий объём": "367 л",
+        "Класс энергопотребления": "A+",
+        "Шум": "39 дБ"
       },
-      "images": ["https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=300&fit=crop"],
+      "images": ["https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=400&fit=crop"],
       "inStock": true,
       "isSale": true,
       "rating": 4.7
     },
     {
       "id": 2,
-      "name": "Стиральная машина Bosch PowerWash 7",
+      "name": "Стиральная машина LG F2J3WS2W",
       "category": "Для кухни",
       "subcategory": "Стиральные и сушильные машины",
-      "price": 1899,
-      "brand": "Bosch",
-      "description": "Фронтальная загрузка 7 кг с прямым приводом. Экономное потребление воды и электроэнергии.",
+      "price": 1599,
+      "brand": "LG",
+      "description": "Фронтальная загрузка 6 кг с прямым приводом. 13 программ стирки.",
       "features": {
-        "Загрузка": "7 кг",
+        "Загрузка": "6 кг",
         "Отжим": "1200 об/мин",
         "Энергопотребление": "A+++",
         "Глубина": "45 см"
       },
-      "images": ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop"],
+      "images": ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop"],
       "inStock": true,
       "isSale": false,
       "rating": 4.5
     },
     {
       "id": 3,
-      "name": "Посудомоечная машина Siemens iQ500",
+      "name": "Посудомоечная машина Bosch SMV25AX00R",
       "category": "Для кухни",
       "subcategory": "Посудомоечные машины",
-      "price": 1699,
-      "oldPrice": 1999,
-      "brand": "Siemens",
-      "description": "Встраиваемая посудомоечная машина на 14 комплектов. Функция быстрой мойки за 30 минут.",
+      "price": 1899,
+      "oldPrice": 2099,
+      "brand": "Bosch",
+      "description": "Встраиваемая посудомоечная машина на 9 комплектов.",
       "features": {
-        "Вместимость": "14 комплектов",
-        "Уровень шума": "44 дБ",
+        "Вместимость": "9 комплектов",
+        "Уровень шума": "48 дБ",
         "Программы": "5",
-        "Индикация": "LED-дисплей"
+        "Потребление воды": "9.5 л/цикл"
       },
-      "images": ["https://images.unsplash.com/photo-1620791144176-2c64c2c5e383?w-400&h=300&fit=crop"],
+      "images": ["https://images.unsplash.com/photo-1620791144176-2c64c2c5e383?w=400&h=400&fit=crop"],
       "inStock": true,
       "isSale": true,
-      "rating": 4.8
-    },
-    {
-      "id": 4,
-      "name": "Телевизор LG OLED 55''",
-      "category": "Для дома",
-      "subcategory": "Телевизоры",
-      "price": 3299,
-      "brand": "LG",
-      "description": "OLED-телевизор с идеальным чёрным цветом и реалистичным изображением. Smart TV на webOS.",
-      "features": {
-        "Диагональ": "55 дюймов",
-        "Разрешение": "4K Ultra HD",
-        "Smart TV": "webOS",
-        "HDR": "Dolby Vision"
-      },
-      "images": ["https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=300&fit=crop"],
-      "inStock": true,
-      "isSale": false,
-      "rating": 4.9
-    },
-    {
-      "id": 5,
-      "name": "Кондиционер Samsung WindFree",
-      "category": "Для дома",
-      "subcategory": "Климатическая техника",
-      "price": 1499,
-      "brand": "Samsung",
-      "description": "Инверторный кондиционер с технологией равномерного распределения воздуха без сквозняков.",
-      "features": {
-        "Мощность": "9000 BTU",
-        "Тип": "Инверторный",
-        "Режимы": "Охлаждение/Обогрев",
-        "Wi-Fi управление": "Да"
-      },
-      "images": ["https://images.unsplash.com/photo-1560074557-6b3a7e4e1c5c?w=400&h=300&fit=crop"],
-      "inStock": true,
-      "isSale": false,
       "rating": 4.6
     },
     {
-      "id": 6,
-      "name": "Электросамокат Xiaomi Pro 2",
-      "category": "Мобильность",
-      "subcategory": "Электросамокаты",
-      "price": 899,
-      "oldPrice": 1099,
-      "brand": "Xiaomi",
-      "description": "Современный электросамокат с запасом хода 45 км. Максимальная скорость 25 км/ч.",
+      "id": 4,
+      "name": "Телевизор LG 55NANO766QA",
+      "category": "Для дома",
+      "subcategory": "Телевизоры",
+      "price": 1899,
+      "brand": "LG",
+      "description": "Телевизор 55 дюймов с разрешением 4K. Процессор α5 Gen5 AI.",
       "features": {
-        "Запас хода": "45 км",
-        "Скорость": "25 км/ч",
-        "Вес": "14.2 кг",
-        "Колёса": "10 дюймов"
+        "Диагональ": "55 дюймов",
+        "Разрешение": "4K UHD",
+        "Smart TV": "webOS",
+        "HDR": "Active HDR"
       },
-      "images": ["https://images.unsplash.com/photo-1579445710183-f9a8161a6c9c?w=400&h=300&fit=crop"],
+      "images": ["https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=400&fit=crop"],
       "inStock": true,
-      "isSale": true,
+      "isSale": false,
+      "rating": 4.8
+    },
+    {
+      "id": 5,
+      "name": "Кондиционер Electrolux EACM-07HG/N3",
+      "category": "Для дома",
+      "subcategory": "Климатическая техника",
+      "price": 1199,
+      "brand": "Electrolux",
+      "description": "Настенная сплит-система с инверторным компрессором.",
+      "features": {
+        "Тип": "Сплит-система",
+        "Мощность охлаждения": "2.0 кВт",
+        "Мощность обогрева": "2.2 кВт",
+        "Площадь помещения": "20 м²"
+      },
+      "images": ["https://images.unsplash.com/photo-1560074557-6b3a7e4e1c5c?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
       "rating": 4.4
     },
     {
+      "id": 6,
+      "name": "Электросамокат Xiaomi Mi Electric Scooter 3",
+      "category": "Мобильность",
+      "subcategory": "Электросамокаты",
+      "price": 799,
+      "oldPrice": 899,
+      "brand": "Xiaomi",
+      "description": "Электросамокат с запасом хода до 30 км. Максимальная скорость 25 км/ч.",
+      "features": {
+        "Запас хода": "30 км",
+        "Скорость": "25 км/ч",
+        "Мощность двигателя": "300 Вт",
+        "Вес": "13.2 кг"
+      },
+      "images": ["https://images.unsplash.com/photo-1579445710183-f9a8161a6c9c?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": true,
+      "rating": 4.3
+    },
+    {
       "id": 7,
-      "name": "Кофемашина De'Longhi Magnifica",
+      "name": "Кофемашина De'Longhi Magnifica S",
       "category": "Для кухни",
       "subcategory": "Встраиваемая техника",
-      "price": 1299,
+      "price": 1499,
       "brand": "De'Longhi",
-      "description": "Автоматическая кофемашина для приготовления эспрессо, капучино и латте. Встроенная кофемолка.",
+      "description": "Автоматическая кофемашина для приготовления эспрессо и капучино.",
       "features": {
         "Тип": "Автоматическая",
         "Давление": "15 бар",
         "Ёмкость для воды": "1.8 л",
         "Кофемолка": "Встроенная"
       },
-      "images": ["https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop"],
+      "images": ["https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop"],
       "inStock": false,
       "isSale": false,
       "rating": 4.7
     },
     {
       "id": 8,
-      "name": "Робот-пылесос iRobot Roomba i3",
+      "name": "Робот-пылесос iRobot Roomba 675",
       "category": "Для дома",
       "subcategory": "Умные пылесосы",
-      "price": 999,
+      "price": 699,
       "brand": "iRobot",
-      "description": "Робот-пылесос с навигацией по комнатам. Автоматическая зарядка и планирование уборки.",
+      "description": "Робот-пылесос с системой навигации. Управление через Wi-Fi.",
       "features": {
         "Тип уборки": "Сухая",
-        "Навигация": "Smart Mapping",
-        "Аккумулятор": "90 мин",
+        "Навигация": "iAdapt",
+        "Время работы": "90 мин",
         "Управление": "Приложение"
       },
-      "images": ["https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop"],
+      "images": ["https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.2
+    },
+    {
+      "id": 9,
+      "name": "Микроволновая печь Samsung ME83KRW-1",
+      "category": "Для кухни",
+      "subcategory": "Микроволновые печи",
+      "price": 299,
+      "brand": "Samsung",
+      "description": "Микроволновая печь с объёмом 23 литра. Мощность 800 Вт.",
+      "features": {
+        "Объём": "23 л",
+        "Мощность": "800 Вт",
+        "Гриль": "Нет",
+        "Конвекция": "Нет"
+      },
+      "images": ["https://images.unsplash.com/photo-1615551043360-33de8b5f410c?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.1
+    },
+    {
+      "id": 10,
+      "name": "Варочная поверхность Bosch PKE645B17E",
+      "category": "Для кухни",
+      "subcategory": "Электроплиты и варочные поверхности",
+      "price": 499,
+      "brand": "Bosch",
+      "description": "Индукционная варочная поверхность на 4 зоны нагрева.",
+      "features": {
+        "Тип": "Индукционная",
+        "Количество конфорок": "4",
+        "Материал": "Стеклокерамика",
+        "Управление": "Сенсорное"
+      },
+      "images": ["https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.6
+    },
+    {
+      "id": 11,
+      "name": "Обогреватель Electrolux ECH/AG-1500 MF",
+      "category": "Для дома",
+      "subcategory": "Обогреватели",
+      "price": 199,
+      "oldPrice": 249,
+      "brand": "Electrolux",
+      "description": "Масляный обогреватель на 1500 Вт. 7 секций, 3 режима мощности.",
+      "features": {
+        "Тип": "Масляный",
+        "Мощность": "1500 Вт",
+        "Секций": "7",
+        "Термостат": "Да"
+      },
+      "images": ["https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": true,
+      "rating": 4.0
+    },
+    {
+      "id": 12,
+      "name": "Водонагреватель Ariston ABS VLS EVO PW 50",
+      "category": "Для дома",
+      "subcategory": "Водонагреватели",
+      "price": 449,
+      "brand": "Ariston",
+      "description": "Накопительный водонагреватель на 50 литров. Мощность 1.5 кВт.",
+      "features": {
+        "Тип": "Накопительный",
+        "Объём": "50 л",
+        "Мощность": "1.5 кВт",
+        "Нагрев до 75°C": "115 мин"
+      },
+      "images": ["https://images.unsplash.com/photo-1600631568591-56f00a82ea38?w=400&h=400&fit=crop"],
       "inStock": true,
       "isSale": false,
       "rating": 4.3
-    }
-  ]
-}
+    },
+    {
+      "id": 13,
+      "name": "Акустическая система JBL PartyBox 110",
+      "category": "Для дома",
+      "subcategory": "Саунбары и акустика",
+      "price": 899,
+      "brand": "JBL",
+      "description": "Портативная акустическая система с мощностью 160 Вт.",
+      "features": {
+        "Мощность": "160 Вт",
+        "Bluetooth": "Да",
+        "Входы": "USB, AUX",
+        "Время работы": "12 часов"
+      },
+      "images": ["https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.8
+    },
+    {
+      "id": 14,
+      "name": "Электровелосипед Xiaomi Himo C20",
+      "category": "Мобильность",
+      "subcategory": "Электровелосипеды",
+      "price": 1499,
+      "brand": "Xiaomi",
+      "description": "Складной электровелосипед с запасом хода 80 км.",
+      "features": {
+        "Запас хода": "80 км",
+        "Скорость": "25 км/ч",
+        "Вес": "24 кг",
+        "Складной": "Да"
+      },
+      "images": ["https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.5
+    },
+    {
+      "id": 15,
+      "name": "Пылесос Dyson V11 Absolute Extra",
+      "category": "Для дома",
+      "subcategory": "Умные пылесосы",
+      "price": 799,
+      "oldPrice": 999,
+      "brand": "Dyson",
+      "description": "Беспроводной пылесос с технологией Hyperdymium.",
+      "features": {
+        "Тип": "Беспроводной",
+        "Мощность всасывания": "185 аВт",
+        "Время работы": "60 мин",
+        "Насадки": "6 шт"
+      },
+      "images": ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": true,
+      "rating": 4.9
+    },
+    {
+      "id": 16,
+      "name": "Холодильник LG GA-B459SLQM",
+      "category": "Для кухни",
+      "subcategory": "Холодильники и морозильники",
+      "price": 2799,
+      "oldPrice": 3099,
+      "brand": "LG",
+      "description": "Холодильник Side-by-Side с системой No Frost и генератором льда.",
+      "features": {
+        "Тип": "Side-by-Side",
+        "No Frost": "Да",
+        "Общий объём": "613 л",
+        "Класс энергопотребления": "A++"
+      },
+      "images": ["https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": true,
+      "rating": 4.8
+    },
+    {
+      "id": 17,
+      "name": "Морозильник Bosch GSN36VIE0N",
+      "category": "Для кухни",
+      "subcategory": "Холодильники и морозильники",
+      "price": 1299,
+      "brand": "Bosch",
+      "description": "Морозильный ларь с полезным объёмом 202 литра.",
+      "features": {
+        "Тип": "Морозильный ларь",
+        "Объём": "202 л",
+        "Звёздочки": "****",
+        "Разморозка": "Ручная"
+      },
+      "images": ["https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.4
+    },
+    {
+      "id": 18,
+      "name": "Стиральная машина Samsung WW80T4020BY",
+      "category": "Для кухни",
+      "subcategory": "Стиральные и сушильные машины",
+      "price": 1399,
+      "oldPrice": 1599,
+      "brand": "Samsung",
+      "description": "Стиральная машина с фронтальной загрузкой 8 кг.",
+      "features": {
+        "Загрузка": "8 кг",
+        "Отжим": "1200 об/мин",
+        "Энергопотребление": "A+++",
+        "Глубина": "55 см"
+      },
+      "images": ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": true,
+      "rating": 4.6
+    },
+    {
+      "id": 19,
+      "name": "Сушильная машина Bosch WTW87NH0BY",
+      "category": "Для кухни",
+      "subcategory": "Стиральные и сушильные машины",
+      "price": 1799,
+      "brand": "Bosch",
+      "description": "Сушильная машина с тепловым насосом. Загрузка 8 кг.",
+      "features": {
+        "Тип": "С тепловым насосом",
+        "Загрузка": "8 кг",
+        "Программы": "14",
+        "Энергопотребление": "A++"
+      },
+      "images": ["https://images.unsplash.com/photo-1622470953794-aa9c70b0fb9d?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.7
+    },
+    {
+      "id": 20,
+      "name": "Встраиваемая духовка Bosch HBA534BS0R",
+      "category": "Для кухни",
+      "subcategory": "Встраиваемая техника",
+      "price": 899,
+      "brand": "Bosch",
+      "description": "Встраиваемая духовка с объёмом 67 литров.",
+      "features": {
+        "Тип": "Электрическая",
+        "Объём": "67 л",
+        "Программы": "7",
+        "Самоочистка": "Каталитическая"
+      },
+      "images": ["https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.5
+    },
+    {
+      "id": 21,
+      "name": "Встраиваемая панель Siemens EH875SC11E",
+      "category": "Для кухни",
+      "subcategory": "Встраиваемая техника",
+      "price": 799,
+      "brand": "Siemens",
+      "description": "Индукционная варочная панель с 4 конфорками.",
+      "features": {
+        "Тип": "Индукционная",
+        "Количество конфорок": "4",
+        "Управление": "Сенсорное",
+        "Блокировка": "Да"
+      },
+      "images": ["https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.6
+    },
+    {
+      "id": 22,
+      "name": "Посудомоечная машина Siemens SN235I01GE",
+      "category": "Для кухни",
+      "subcategory": "Посудомоечные машины",
+      "price": 1699,
+      "oldPrice": 1899,
+      "brand": "Siemens",
+      "description": "Встраиваемая посудомоечная машина на 13 комплектов.",
+      "features": {
+        "Вместимость": "13 комплектов",
+        "Уровень шума": "44 дБ",
+        "Программы": "6",
+        "Индикация": "LED-дисплей"
+      },
+      "images": ["https://images.unsplash.com/photo-1620791144176-2c64c2c5e383?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": true,
+      "rating": 4.7
+    },
+    {
+      "id": 23,
+      "name": "Электрическая плита Gorenje EC52CLB",
+      "category": "Для кухни",
+      "subcategory": "Электроплиты и варочные поверхности",
+      "price": 699,
+      "brand": "Gorenje",
+      "description": "Электрическая плита с духовкой и 4 конфорками.",
+      "features": {
+        "Тип": "Электрическая",
+        "Количество конфорок": "4",
+        "Духовка": "Электрическая",
+        "Объём духовки": "52 л"
+      },
+      "images": ["https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.3
+    },
+    {
+      "id": 24,
+      "name": "Варочная панель Electrolux EHL6270FOK",
+      "category": "Для кухни",
+      "subcategory": "Электроплиты и варочные поверхности",
+      "price": 449,
+      "brand": "Electrolux",
+      "description": "Стеклокерамическая варочная панель на 4 конфорки.",
+      "features": {
+        "Тип": "Стеклокерамическая",
+        "Количество конфорок": "4",
+        "Регулировка": "Сенсорная",
+        "Защита": "От перегрева"
+      },
+      "images": ["https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.4
+    },
+    {
+      "id": 25,
+      "name": "Микроволновая печь LG MH6535GIB",
+      "category": "Для кухни",
+      "subcategory": "Микроволновые печи",
+      "price": 399,
+      "oldPrice": 449,
+      "brand": "LG",
+      "description": "Микроволновая печь с грилем и объёмом 25 литров.",
+      "features": {
+        "Объём": "25 л",
+        "Мощность": "900 Вт",
+        "Гриль": "Да",
+        "Программы": "Автоматические"
+      },
+      "images": ["https://images.unsplash.com/photo-1615551043360-33de8b5f410c?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": true,
+      "rating": 4.2
+    },
+    {
+      "id": 26,
+      "name": "Телевизор Samsung QE55Q60AAU",
+      "category": "Для дома",
+      "subcategory": "Телевизоры",
+      "price": 2299,
+      "brand": "Samsung",
+      "description": "QLED телевизор 55 дюймов с квантовыми точками.",
+      "features": {
+        "Диагональ": "55 дюймов",
+        "Технология": "QLED",
+        "Smart TV": "Tizen",
+        "HDR": "Quantum HDR"
+      },
+      "images": ["https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.8
+    },
+    {
+      "id": 27,
+      "name": "Телевизор Sony KD-55X80J",
+      "category": "Для дома",
+      "subcategory": "Телевизоры",
+      "price": 1999,
+      "brand": "Sony",
+      "description": "4K LED телевизор с процессором X1 и Android TV.",
+      "features": {
+        "Диагональ": "55 дюймов",
+        "Разрешение": "4K",
+        "Smart TV": "Android TV",
+        "HDR": "HDR10"
+      },
+      "images": ["https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.7
+    },
+    {
+      "id": 28,
+      "name": "Кондиционер Ballu BSAG-07HN1",
+      "category": "Для дома",
+      "subcategory": "Климатическая техника",
+      "price": 899,
+      "oldPrice": 999,
+      "brand": "Ballu",
+      "description": "Настенная сплит-система с функцией обогрева.",
+      "features": {
+        "Тип": "Сплит-система",
+        "Мощность охлаждения": "2.0 кВт",
+        "Режимы": "Охлаждение/Обогрев",
+        "Wi-Fi": "Нет"
+      },
+      "images": ["https://images.unsplash.com/photo-1560074557-6b3a7e4e1c5c?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": true,
+      "rating": 4.3
+    },
+    {
+      "id": 29,
+      "name": "Очиститель воздуха Xiaomi Air Purifier 3H",
+      "category": "Для дома",
+      "subcategory": "Климатическая техника",
+      "price": 299,
+      "brand": "Xiaomi",
+      "description": "Очиститель воздуха с HEPA фильтром и управлением через приложение.",
+      "features": {
+        "Тип": "Очиститель воздуха",
+        "Площадь": "48 м²",
+        "Фильтры": "HEPA H13",
+        "Управление": "Приложение"
+      },
+      "images": ["https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.5
+    },
+    {
+      "id": 30,
+      "name": "Робот-пылесос Samsung VR30T85513W/EV",
+      "category": "Для дома",
+      "subcategory": "Умные пылесосы",
+      "price": 799,
+      "brand": "Samsung",
+      "description": "Робот-пылесос с лазерной навигацией и автоматической зарядкой.",
+      "features": {
+        "Навигация": "Lidar",
+        "Пылесборник": "0.4 л",
+        "Время работы": "120 мин",
+        "Управление": "Приложение"
+      },
+      "images": ["https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.6
+    },
+    {
+      "id": 31,
+      "name": "Пылесос с мешком Philips FC9352/01",
+      "category": "Для дома",
+      "subcategory": "Умные пылесосы",
+      "price": 199,
+      "brand": "Philips",
+      "description": "Пылесос с мешком и мощностью всасывания 500 Вт.",
+      "features": {
+        "Тип": "С мешком",
+        "Мощность": "500 Вт",
+        "Мешок": "3 л",
+        "Фильтр": "HEPA"
+      },
+      "images": ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.1
+    },
+    {
+      "id": 32,
+      "name": "Саундбар Samsung HW-Q600A",
+      "category": "Для дома",
+      "subcategory": "Саунбары и акустика",
+      "price": 599,
+      "brand": "Samsung",
+      "description": "Саундбар с технологией Q-Symphony и Dolby Atmos.",
+      "features": {
+        "Мощность": "330 Вт",
+        "Каналы": "3.1.2",
+        "Dolby Atmos": "Да",
+        "Bluetooth": "Да"
+      },
+      "images": ["https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.7
+    },
+    {
+      "id": 33,
+      "name": "Колонка JBL Charge 5",
+      "category": "Для дома",
+      "subcategory": "Саунбары и акустика",
+      "price": 299,
+      "brand": "JBL",
+      "description": "Портативная Bluetooth колонка с защитой от воды.",
+      "features": {
+        "Мощность": "40 Вт",
+        "Время работы": "20 часов",
+        "Защита": "IP67",
+        "Bluetooth": "5.1"
+      },
+      "images": ["https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.8
+    },
+    {
+      "id": 34,
+      "name": "Масляный обогреватель Timberk TOR 21.1507 BC/BCL",
+      "category": "Для дома",
+      "subcategory": "Обогреватели",
+      "price": 149,
+      "oldPrice": 179,
+      "brand": "Timberk",
+      "description": "Масляный обогреватель на 1500 Вт с 7 секциями.",
+      "features": {
+        "Тип": "Масляный",
+        "Мощность": "1500 Вт",
+        "Секций": "7",
+        "Термостат": "Механический"
+      },
+      "images": ["https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": true,
+      "rating": 4.2
+    },
+    {
+      "id": 35,
+      "name": "Конвектор Electrolux ECH/R-1500 T",
+      "category": "Для дома",
+      "subcategory": "Обогреватели",
+      "price": 179,
+      "brand": "Electrolux",
+      "description": "Настенный конвектор с электронным управлением.",
+      "features": {
+        "Тип": "Конвектор",
+        "Мощность": "1500 Вт",
+        "Управление": "Электронное",
+        "Таймер": "24 часа"
+      },
+      "images": ["https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.3
+    },
+    {
+      "id": 36,
+      "name": "Водонагреватель Thermex Stream 350",
+      "category": "Для дома",
+      "subcategory": "Водонагреватели",
+      "price": 299,
+      "brand": "Thermex",
+      "description": "Накопительный водонагреватель на 50 литров.",
+      "features": {
+        "Тип": "Накопительный",
+        "Объём": "50 л",
+        "Мощность": "1.5 кВт",
+        "Защита": "От сухого нагрева"
+      },
+      "images": ["https://images.unsplash.com/photo-1600631568591-56f00a82ea38?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.4
+    },
+    {
+      "id": 37,
+      "name": "Проточный водонагреватель Stiebel Eltron DHC-E 8",
+      "category": "Для дома",
+      "subcategory": "Водонагреватели",
+      "price": 399,
+      "brand": "Stiebel Eltron",
+      "description": "Проточный водонагреватель для одной точки водоразбора.",
+      "features": {
+        "Тип": "Проточный",
+        "Мощность": "8 кВт",
+        "Производительность": "4 л/мин",
+        "Защита": "IP25"
+      },
+      "images": ["https://images.unsplash.com/photo-1600631568591-56f00a82ea38?w=400&h=400&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.5
+    },
+    {
+      "id": 38,
+      "name": "Электросамокат Ninebot Max G30P",
+      "category": "Мобильность",
+      "subcategory": "Электросамокаты",
+      "price": 1199,
+      "brand": "Ninebot",
+      "description": "Электросамокат с запасом хода 65 км и мощным двигателем.",
+      "features": {
+        "Запас хода": "65 км",
+        "Скорость": "30 км/ч",
+        "Мощность": "350 Вт",
+        "Вес": "19.1 кг"
+      },
+      "images": ["https://images.unsplash.com/photo-1579445710183-f9
