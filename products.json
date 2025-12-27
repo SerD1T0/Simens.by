@@ -1,0 +1,160 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Холодильник Siemens CoolMaster 320",
+      "category": "Для кухни",
+      "subcategory": "Холодильники и морозильники",
+      "price": 2599,
+      "oldPrice": 2899,
+      "brand": "Siemens",
+      "description": "Двухкамерный холодильник с системой NoFrost. Сохраняет свежесть продуктов благодаря зоне нулевой температуры.",
+      "features": {
+        "Тип": "Двухкамерный",
+        "NoFrost": "Да",
+        "Общий объём": "320 л",
+        "Класс энергопотребления": "A++",
+        "Цвет": "Нержавеющая сталь"
+      },
+      "images": ["https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=300&fit=crop"],
+      "inStock": true,
+      "isSale": true,
+      "rating": 4.7
+    },
+    {
+      "id": 2,
+      "name": "Стиральная машина Bosch PowerWash 7",
+      "category": "Для кухни",
+      "subcategory": "Стиральные и сушильные машины",
+      "price": 1899,
+      "brand": "Bosch",
+      "description": "Фронтальная загрузка 7 кг с прямым приводом. Экономное потребление воды и электроэнергии.",
+      "features": {
+        "Загрузка": "7 кг",
+        "Отжим": "1200 об/мин",
+        "Энергопотребление": "A+++",
+        "Глубина": "45 см"
+      },
+      "images": ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.5
+    },
+    {
+      "id": 3,
+      "name": "Посудомоечная машина Siemens iQ500",
+      "category": "Для кухни",
+      "subcategory": "Посудомоечные машины",
+      "price": 1699,
+      "oldPrice": 1999,
+      "brand": "Siemens",
+      "description": "Встраиваемая посудомоечная машина на 14 комплектов. Функция быстрой мойки за 30 минут.",
+      "features": {
+        "Вместимость": "14 комплектов",
+        "Уровень шума": "44 дБ",
+        "Программы": "5",
+        "Индикация": "LED-дисплей"
+      },
+      "images": ["https://images.unsplash.com/photo-1620791144176-2c64c2c5e383?w-400&h=300&fit=crop"],
+      "inStock": true,
+      "isSale": true,
+      "rating": 4.8
+    },
+    {
+      "id": 4,
+      "name": "Телевизор LG OLED 55''",
+      "category": "Для дома",
+      "subcategory": "Телевизоры",
+      "price": 3299,
+      "brand": "LG",
+      "description": "OLED-телевизор с идеальным чёрным цветом и реалистичным изображением. Smart TV на webOS.",
+      "features": {
+        "Диагональ": "55 дюймов",
+        "Разрешение": "4K Ultra HD",
+        "Smart TV": "webOS",
+        "HDR": "Dolby Vision"
+      },
+      "images": ["https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=300&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.9
+    },
+    {
+      "id": 5,
+      "name": "Кондиционер Samsung WindFree",
+      "category": "Для дома",
+      "subcategory": "Климатическая техника",
+      "price": 1499,
+      "brand": "Samsung",
+      "description": "Инверторный кондиционер с технологией равномерного распределения воздуха без сквозняков.",
+      "features": {
+        "Мощность": "9000 BTU",
+        "Тип": "Инверторный",
+        "Режимы": "Охлаждение/Обогрев",
+        "Wi-Fi управление": "Да"
+      },
+      "images": ["https://images.unsplash.com/photo-1560074557-6b3a7e4e1c5c?w=400&h=300&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.6
+    },
+    {
+      "id": 6,
+      "name": "Электросамокат Xiaomi Pro 2",
+      "category": "Мобильность",
+      "subcategory": "Электросамокаты",
+      "price": 899,
+      "oldPrice": 1099,
+      "brand": "Xiaomi",
+      "description": "Современный электросамокат с запасом хода 45 км. Максимальная скорость 25 км/ч.",
+      "features": {
+        "Запас хода": "45 км",
+        "Скорость": "25 км/ч",
+        "Вес": "14.2 кг",
+        "Колёса": "10 дюймов"
+      },
+      "images": ["https://images.unsplash.com/photo-1579445710183-f9a8161a6c9c?w=400&h=300&fit=crop"],
+      "inStock": true,
+      "isSale": true,
+      "rating": 4.4
+    },
+    {
+      "id": 7,
+      "name": "Кофемашина De'Longhi Magnifica",
+      "category": "Для кухни",
+      "subcategory": "Встраиваемая техника",
+      "price": 1299,
+      "brand": "De'Longhi",
+      "description": "Автоматическая кофемашина для приготовления эспрессо, капучино и латте. Встроенная кофемолка.",
+      "features": {
+        "Тип": "Автоматическая",
+        "Давление": "15 бар",
+        "Ёмкость для воды": "1.8 л",
+        "Кофемолка": "Встроенная"
+      },
+      "images": ["https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop"],
+      "inStock": false,
+      "isSale": false,
+      "rating": 4.7
+    },
+    {
+      "id": 8,
+      "name": "Робот-пылесос iRobot Roomba i3",
+      "category": "Для дома",
+      "subcategory": "Умные пылесосы",
+      "price": 999,
+      "brand": "iRobot",
+      "description": "Робот-пылесос с навигацией по комнатам. Автоматическая зарядка и планирование уборки.",
+      "features": {
+        "Тип уборки": "Сухая",
+        "Навигация": "Smart Mapping",
+        "Аккумулятор": "90 мин",
+        "Управление": "Приложение"
+      },
+      "images": ["https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop"],
+      "inStock": true,
+      "isSale": false,
+      "rating": 4.3
+    }
+  ]
+}
