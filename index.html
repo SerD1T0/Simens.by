@@ -113,103 +113,48 @@
     </section>
 
     <!-- Категории товаров -->
-    <section class="categories-section" id="categories">
-        <div class="container">
-            <h2 class="section-title">Категории товаров</h2>
-            
-            <div class="categories-grid">
-                <div class="category-card">
-                    <div class="category-header">
-                        <i class="fas fa-utensils"></i>
-                        <h3>Для кухни</h3>
-                    </div>
-                    <ul class="category-list">
-                        <li><i class="fas fa-check"></i> Холодильники и морозильники</li>
-                        <li><i class="fas fa-check"></i> Стиральные и сушильные машины</li>
-                        <li><i class="fas fa-check"></i> Встраиваемая техника</li>
-                        <li><i class="fas fa-check"></i> Посудомоечные машины</li>
-                        <li><i class="fas fa-check"></i> Электроплиты и варочные поверхности</li>
-                        <li><i class="fas fa-check"></i> Микроволновые печи</li>
-                    </ul>
-                </div>
-
-                <div class="category-card">
-                    <div class="category-header">
-                        <i class="fas fa-home"></i>
-                        <h3>Для дома</h3>
-                    </div>
-                    <ul class="category-list">
-                        <li><i class="fas fa-check"></i> Телевизоры</li>
-                        <li><i class="fas fa-check"></i> Климатическая техника</li>
-                        <li><i class="fas fa-check"></i> Умные пылесосы</li>
-                        <li><i class="fas fa-check"></i> Саунбары и акустика</li>
-                        <li><i class="fas fa-check"></i> Обогреватели</li>
-                        <li><i class="fas fa-check"></i> Водонагреватели</li>
-                    </ul>
-                </div>
-
-                <div class="category-card">
-                    <div class="category-header">
-                        <i class="fas fa-bolt"></i>
-                        <h3>Мобильность</h3>
-                    </div>
-                    <ul class="category-list">
-                        <li><i class="fas fa-check"></i> Электросамокаты</li>
-                        <li><i class="fas fa-check"></i> Электроскутеры</li>
-                        <li><i class="fas fa-check"></i> Электровелосипеды</li>
-                        <li><i class="fas fa-check"></i> Полная предпродажная подготовка</li>
-                        <li><i class="fas fa-check"></i> Аксессуары</li>
-                        <li><i class="fas fa-check"></i> Обслуживание</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Преимущества -->
-    <section class="advantages-section">
-        <div class="container">
-            <h2 class="section-title">Наши преимущества</h2>
-            <!-- Каталог товаров -->
-<!-- Категории товаров -->
+  <!-- Категории товаров с правильными ссылками -->
 <section id="categories">
   <h2>Категории товаров</h2>
   <div class="category-navigation">
-    <div class="category-item" data-category="Для кухни">
-      <h3>Для кухни</h3>
+    
+    <!-- Для кухни -->
+    <div class="category-item">
+      <h3><a href="#catalog" onclick="filterProducts('Для кухни')">Для кухни</a></h3>
       <ul>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Холодильники и морозильники')">Холодильники и морозильники</a></li>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Стиральные и сушильные машины')">Стиральные и сушильные машины</a></li>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Встраиваемая техника')">Встраиваемая техника</a></li>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Посудомоечные машины')">Посудомоечные машины</a></li>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Электроплиты и варочные поверхности')">Электроплиты и варочные поверхности</a></li>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Микроволновые печи')">Микроволновые печи</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Холодильники и морозильники')">Холодильники и морозильники</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Стиральные и сушильные машины')">Стиральные и сушильные машины</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Встраиваемая техника')">Встраиваемая техника</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Посудомоечные машины')">Посудомоечные машины</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Электроплиты и варочные поверхности')">Электроплиты и варочные поверхности</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Микроволновые печи')">Микроволновые печи</a></li>
       </ul>
     </div>
     
-    <div class="category-item" data-category="Для дома">
-      <h3>Для дома</h3>
+    <!-- Для дома -->
+    <div class="category-item">
+      <h3><a href="#catalog" onclick="filterProducts('Для дома')">Для дома</a></h3>
       <ul>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Телевизоры')">Телевизоры</a></li>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Климатическая техника')">Климатическая техника</a></li>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Умные пылесосы')">Умные пылесосы</a></li>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Саунбары и акустика')">Саунбары и акустика</a></li>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Обогреватели')">Обогреватели</a></li>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Водонагреватели')">Водонагреватели</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Телевизоры')">Телевизоры</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Климатическая техника')">Климатическая техника</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Умные пылесосы')">Умные пылесосы</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Саунбары и акустика')">Саунбары и акустика</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Обогреватели')">Обогреватели</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Водонагреватели')">Водонагреватели</a></li>
       </ul>
     </div>
     
-    <div class="category-item" data-category="Мобильность">
-      <h3>Мобильность</h3>
+    <!-- Мобильность -->
+    <div class="category-item">
+      <h3><a href="#catalog" onclick="filterProducts('Мобильность')">Мобильность</a></h3>
       <ul>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Электросамокаты')">Электросамокаты</a></li>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Электроскутеры')">Электроскутеры</a></li>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Электровелосипеды')">Электровелосипеды</a></li>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Полная предпродажная подготовка')">Полная предпродажная подготовка</a></li>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Аксессуары')">Аксессуары</a></li>
-        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Обслуживание')">Обслуживание</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Электросамокаты')">Электросамокаты</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Электроскутеры')">Электроскутеры</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Электровелосипеды')">Электровелосипеды</a></li>
+        <li><a href="#catalog" onclick="filterBySubcategory('Аксессуары')">Аксессуары</a></li>
       </ul>
     </div>
+    
   </div>
 </section>
     <!-- Товары загружаются через JavaScript -->
