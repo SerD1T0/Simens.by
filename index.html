@@ -170,7 +170,55 @@
     <section class="advantages-section">
         <div class="container">
             <h2 class="section-title">Наши преимущества</h2>
-            
+            <!-- Каталог товаров -->
+<!-- Категории товаров -->
+<section id="categories">
+  <h2>Категории товаров</h2>
+  <div class="category-navigation">
+    <div class="category-item" data-category="Для кухни">
+      <h3>Для кухни</h3>
+      <ul>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Холодильники и морозильники')">Холодильники и морозильники</a></li>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Стиральные и сушильные машины')">Стиральные и сушильные машины</a></li>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Встраиваемая техника')">Встраиваемая техника</a></li>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Посудомоечные машины')">Посудомоечные машины</a></li>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Электроплиты и варочные поверхности')">Электроплиты и варочные поверхности</a></li>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Микроволновые печи')">Микроволновые печи</a></li>
+      </ul>
+    </div>
+    
+    <div class="category-item" data-category="Для дома">
+      <h3>Для дома</h3>
+      <ul>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Телевизоры')">Телевизоры</a></li>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Климатическая техника')">Климатическая техника</a></li>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Умные пылесосы')">Умные пылесосы</a></li>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Саунбары и акустика')">Саунбары и акустика</a></li>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Обогреватели')">Обогреватели</a></li>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Водонагреватели')">Водонагреватели</a></li>
+      </ul>
+    </div>
+    
+    <div class="category-item" data-category="Мобильность">
+      <h3>Мобильность</h3>
+      <ul>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Электросамокаты')">Электросамокаты</a></li>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Электроскутеры')">Электроскутеры</a></li>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Электровелосипеды')">Электровелосипеды</a></li>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Полная предпродажная подготовка')">Полная предпродажная подготовка</a></li>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Аксессуары')">Аксессуары</a></li>
+        <li><a href="javascript:void(0)" onclick="filterBySubcategory('Обслуживание')">Обслуживание</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+    <!-- Товары загружаются через JavaScript -->
+  </div>
+  
+  <div class="catalog-empty" id="no-products" style="display: none;">
+    <p>Товары не найдены. Попробуйте выбрать другую категорию.</p>
+  </div>
+</section>
             <div class="advantages-grid">
                 <div class="advantage-card">
                     <div class="advantage-icon">
