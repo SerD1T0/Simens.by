@@ -1,179 +1,471 @@
-// Полная база данных товаров для сайта Simens (на основе категорий MediaMax.by)
+// БАЗА ДАННЫХ ТОВАРОВ
 const productsDatabase = {
-    // Холодильники и морозильники
-    'fridges': [
+    // =========== ДЛЯ КУХНИ (15 товаров) ===========
+    'Для кухни': [
         {
-            id: 1001,
-            name: 'Холодильник Samsung RB33J3200SA',
+            id: 1,
+            name: "Холодильник Samsung RB37A520NSA",
+            brand: "Samsung",
+            price: 2249,
+            oldPrice: 2499,
+            description: "Двухкамерный с No Frost",
+            features: ["No Frost", "367 л", "Инвертор", "A+ класс"],
+            rating: 4.7,
+            image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=300&fit=crop"
+        },
+        {
+            id: 2,
+            name: "Стиральная машина LG F2J3WS2W",
+            brand: "LG",
+            price: 1599,
+            description: "Фронтальная загрузка 6 кг",
+            features: ["6 кг", "1200 об/мин", "A+++", "Прямой привод"],
+            rating: 4.5,
+            image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop"
+        },
+        {
+            id: 3,
+            name: "Посудомоечная машина Bosch SMV25AX00R",
+            brand: "Bosch",
             price: 1899,
             oldPrice: 2099,
-            category: 'Для кухни',
-            brand: 'Samsung',
-            features: ['No Frost', '352 л', 'Инверторный компрессор', 'A+ энергопотребление'],
-            description: 'Двухкамерный холодильник с системой No Frost. Экономичный и тихий.',
-            image: 'fridge-samsung',
-            rating: 4.7,
-            stock: 5
-        },
-        {
-            id: 1002,
-            name: 'Холодильник Atlant XM 4308-000',
-            price: 1299,
-            category: 'Для кухни',
-            brand: 'Atlant',
-            features: ['280 л', 'Ручная разморозка', 'Электронное управление'],
-            description: 'Надежный однокамерный холодильник белорусского производства.',
-            image: 'fridge-atlant',
-            rating: 4.3,
-            stock: 8
-        },
-        {
-            id: 1003,
-            name: 'Морозильник Beko RCNK335K00W',
-            price: 899,
-            oldPrice: 999,
-            category: 'Для кухни',
-            brand: 'Beko',
-            features: ['85 л', 'No Frost', 'Быстрая заморозка'],
-            description: 'Компактный морозильник для дома и дачи.',
-            image: 'freezer-beko',
-            rating: 4.5,
-            stock: 3
-        }
-    ],
-    
-    // Стиральные машины
-    'washing-machines': [
-        {
-            id: 2001,
-            name: 'Стиральная машина LG F2J3NS0W',
-            price: 1599,
-            oldPrice: 1799,
-            category: 'Для кухни',
-            brand: 'LG',
-            features: ['6 кг', '1200 об/мин', 'Прямой привод', 'Сушка'],
-            description: 'Стиральная машина с функцией сушки. Экономит время и место.',
-            image: 'washer-lg',
-            rating: 4.8,
-            stock: 4
-        },
-        {
-            id: 2002,
-            name: 'Стиральная машина Indesit IWSC 5105',
-            price: 899,
-            category: 'Для кухни',
-            brand: 'Indesit',
-            features: ['5 кг', '1000 об/мин', '15 программ'],
-            description: 'Надежная и простая в управлении стиральная машина.',
-            image: 'washer-indesit',
-            rating: 4.2,
-            stock: 7
-        }
-    ],
-    
-    // Телевизоры
-    'tvs': [
-        {
-            id: 3001,
-            name: 'Телевизор Samsung UE43TU7090U',
-            price: 1299,
-            oldPrice: 1499,
-            category: 'Для дома',
-            brand: 'Samsung',
-            features: ['43"', '4K UHD', 'Smart TV', 'HDR'],
-            description: 'Телевизор с кристально четким изображением 4K.',
-            image: 'tv-samsung',
+            description: "Встраиваемая на 9 комплектов",
+            features: ["9 комплектов", "48 дБ", "5 программ", "A++"],
             rating: 4.6,
-            stock: 6
+            image: "https://images.unsplash.com/photo-1620791144176-2c64c2c5e383?w=400&h=300&fit=crop"
         },
         {
-            id: 3002,
-            name: 'Телевизор LG 43UP75006LF',
-            price: 1199,
-            category: 'Для дома',
-            brand: 'LG',
-            features: ['43"', '4K', 'webOS', 'AI Sound'],
-            description: 'Умный телевизор с платформой webOS и голосовым управлением.',
-            image: 'tv-lg',
-            rating: 4.7,
-            stock: 5
-        }
-    ],
-    
-    // Микроволновые печи
-    'microwaves': [
-        {
-            id: 4001,
-            name: 'Микроволновка Samsung MG23K3515AK',
+            id: 4,
+            name: "Микроволновая печь Samsung ME83KRW-1",
+            brand: "Samsung",
             price: 299,
-            category: 'Для кухни',
-            brand: 'Samsung',
-            features: ['23 л', 'Гриль', 'Инверторная технология'],
-            description: 'Микроволновка с функцией гриля и равномерным нагревом.',
-            image: 'microwave-samsung',
-            rating: 4.4,
-            stock: 9
-        }
-    ],
-    
-    // Пылесосы
-    'vacuums': [
-        {
-            id: 5001,
-            name: 'Пылесос моющий Karcher SE 4002',
-            price: 499,
-            oldPrice: 599,
-            category: 'Для дома',
-            brand: 'Karcher',
-            features: ['Моющий', 'Аквафильтр', '1400 Вт'],
-            description: 'Моющий пылесос для идеальной чистоты ковров и полов.',
-            image: 'vacuum-karcher',
-            rating: 4.5,
-            stock: 4
+            description: "23 литра, 800 Вт",
+            features: ["23 л", "800 Вт", "Электронное управление", "6 уровней"],
+            rating: 4.1,
+            image: "https://images.unsplash.com/photo-1615551043360-33de8b5f410c?w=400&h=300&fit=crop"
         },
         {
-            id: 5002,
-            name: 'Робот-пылесос Xiaomi Mi Robot',
-            price: 799,
-            category: 'Для дома',
-            brand: 'Xiaomi',
-            features: ['LDS навигация', 'Управление со смартфона'],
-            description: 'Умный робот-пылесос, который убирается сам.',
-            image: 'vacuum-xiaomi',
-            rating: 4.8,
-            stock: 2
-        }
-    ],
-    
-    // Электросамокаты
-    'scooters': [
-        {
-            id: 6001,
-            name: 'Электросамокат Xiaomi Mi Electric Scooter 3',
-            price: 899,
-            category: 'Мобильность',
-            brand: 'Xiaomi',
-            features: ['30 км пробег', '25 км/ч', 'Складной'],
-            description: 'Популярный электросамокат для городских поездок.',
-            image: 'scooter-xiaomi',
+            id: 5,
+            name: "Варочная панель Bosch PKE645B17E",
+            brand: "Bosch",
+            price: 499,
+            description: "Индукционная, 4 зоны",
+            features: ["Индукционная", "4 конфорки", "Сенсор", "Защита"],
             rating: 4.6,
-            stock: 3
+            image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&h=300&fit=crop"
+        },
+        {
+            id: 6,
+            name: "Кофемашина De'Longhi Magnifica S",
+            brand: "De'Longhi",
+            price: 1499,
+            oldPrice: 1699,
+            description: "Автоматическая с кофемолкой",
+            features: ["15 бар", "Встроенная кофемолка", "1.8 л", "Капучино"],
+            rating: 4.7,
+            image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop"
+        },
+        {
+            id: 7,
+            name: "Духовой шкаф Bosch HBA534BS0R",
+            brand: "Bosch",
+            price: 899,
+            description: "Электрический, 67 литров",
+            features: ["67 л", "7 программ", "Самоочистка", "Таймер"],
+            rating: 4.5,
+            image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop"
+        },
+        {
+            id: 8,
+            name: "Холодильник ATLANT ХМ 4623",
+            brand: "ATLANT",
+            price: 1299,
+            description: "Двухкамерный, 335 литров",
+            features: ["335 л", "Частичный No Frost", "A+", "Экономный"],
+            rating: 4.3,
+            image: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&h=300&fit=crop"
+        },
+        {
+            id: 9,
+            name: "Морозильник Бирюса 125",
+            brand: "Бирюса",
+            price: 799,
+            description: "Морозильный ларь",
+            features: ["125 л", "4 звезды", "Ручная разморозка", "B класс"],
+            rating: 4.0,
+            image: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&h=300&fit=crop"
+        },
+        {
+            id: 10,
+            name: "Вытяжка Krona Kamilla 600",
+            brand: "Krona",
+            price: 349,
+            oldPrice: 399,
+            description: "Купольная вытяжка",
+            features: ["600 м³/ч", "Сенсорное управление", "Подсветка", "3 скорости"],
+            rating: 4.2,
+            image: "https://images.unsplash.com/photo-1585730061512-5c3134e8a6c6?w=400&h=300&fit=crop"
+        },
+        {
+            id: 11,
+            name: "Электрический чайник Bosch TWK7201",
+            brand: "Bosch",
+            price: 89,
+            description: "Металлический, 1.7 л",
+            features: ["1.7 л", "Металлический", "Защита от включения без воды", "Съемный фильтр"],
+            rating: 4.4,
+            image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=300&fit=crop"
+        },
+        {
+            id: 12,
+            name: "Блендер Philips HR3655",
+            brand: "Philips",
+            price: 199,
+            description: "Мощный блендер с мельницей",
+            features: ["1000 Вт", "Ножи ProBlend", "Мельница для кофе", "2 скорости"],
+            rating: 4.3,
+            image: "https://images.unsplash.com/photo-1553531889-e5867f4f4b7c?w=400&h=300&fit=crop"
+        },
+        {
+            id: 13,
+            name: "Тостер Tefal TT110D38",
+            brand: "Tefal",
+            price: 129,
+            description: "Двухслотовый тостер",
+            features: ["2 слота", "6 степеней поджаривания", "Функция разморозки", "Автоматический подъем"],
+            rating: 4.2,
+            image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=400&h=300&fit=crop"
+        },
+        {
+            id: 14,
+            name: "Мясорубка Bosch MFW67440",
+            brand: "Bosch",
+            price: 299,
+            description: "Электрическая мясорубка",
+            features: ["2000 Вт", "Металлический корпус", "Реверс", "Насадки для колбас"],
+            rating: 4.5,
+            image: "https://images.unsplash.com/photo-1546940511-1868d5c9b7c5?w=400&h=300&fit=crop"
+        },
+        {
+            id: 15,
+            name: "Соковыжималка Philips HR1832",
+            brand: "Philips",
+            price: 149,
+            description: "Центробежная соковыжималка",
+            features: ["500 Вт", "1.5 л контейнер", "Капельная остановка", "Простая сборка"],
+            rating: 4.3,
+            image: "https://images.unsplash.com/photo-1547592180-85f173990554?w=400&h=300&fit=crop"
         }
     ],
     
-    // Кондиционеры
-    'conditioners': [
+    // =========== ДЛЯ ДОМА (15 товаров) ===========
+    'Для дома': [
         {
-            id: 7001,
-            name: 'Кондиционер Samsung AR09TYHQBWK',
-            price: 1299,
-            category: 'Для дома',
-            brand: 'Samsung',
-            features: ['Инвертор', 'Wi-Fi', '9 000 BTU'],
-            description: 'Сплит-система с инверторным компрессором для экономии энергии.',
-            image: 'ac-samsung',
+            id: 16,
+            name: "Телевизор LG 55NANO766QA",
+            brand: "LG",
+            price: 1899,
+            description: "55 дюймов, 4K, Smart TV",
+            features: ["55 дюймов", "4K UHD", "webOS", "HDR"],
+            rating: 4.8,
+            image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=300&fit=crop"
+        },
+        {
+            id: 17,
+            name: "Кондиционер Electrolux EACM-07HG",
+            brand: "Electrolux",
+            price: 1199,
+            description: "Сплит-система, инвертор",
+            features: ["2 кВт", "Инвертор", "Wi-Fi", "20 м²"],
+            rating: 4.4,
+            image: "https://images.unsplash.com/photo-1560074557-6b3a7e4e1c5c?w=400&h=300&fit=crop"
+        },
+        {
+            id: 18,
+            name: "Робот-пылесос iRobot Roomba 675",
+            brand: "iRobot",
+            price: 699,
+            description: "Wi-Fi управление",
+            features: ["iAdapt навигация", "Wi-Fi", "90 мин", "Автозарядка"],
+            rating: 4.2,
+            image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=400&h=300&fit=crop"
+        },
+        {
+            id: 19,
+            name: "Обогреватель Electrolux ECH/AG-1500",
+            brand: "Electrolux",
+            price: 199,
+            oldPrice: 249,
+            description: "Масляный, 7 секций",
+            features: ["1500 Вт", "7 секций", "3 режима", "Термостат"],
+            rating: 4.0,
+            image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop"
+        },
+        {
+            id: 20,
+            name: "Водонагреватель Ariston ABS VLS 50",
+            brand: "Ariston",
+            price: 449,
+            description: "Накопительный, 50 литров",
+            features: ["50 л", "1.5 кВт", "Защита от коррозии", "Термометр"],
+            rating: 4.3,
+            image: "https://images.unsplash.com/photo-1600631568591-56f00a82ea38?w=400&h=300&fit=crop"
+        },
+        {
+            id: 21,
+            name: "Акустическая система JBL PartyBox 110",
+            brand: "JBL",
+            price: 899,
+            description: "Портативная колонка",
+            features: ["160 Вт", "Bluetooth", "12 часов", "Светодиоды"],
+            rating: 4.8,
+            image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&h=300&fit=crop"
+        },
+        {
+            id: 22,
+            name: "Пылесос Dyson V11 Absolute",
+            brand: "Dyson",
+            price: 799,
+            oldPrice: 999,
+            description: "Беспроводной пылесос",
+            features: ["60 мин", "185 аВт", "6 насадок", "LCD дисплей"],
+            rating: 4.9,
+            image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop"
+        },
+        {
+            id: 23,
+            name: "Увлажнитель воздуха Xiaomi",
+            brand: "Xiaomi",
+            price: 149,
+            description: "Ультразвуковой",
+            features: ["Ультразвуковой", "Приложение", "40 м²", "Ночной режим"],
+            rating: 4.3,
+            image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=300&fit=crop"
+        },
+        {
+            id: 24,
+            name: "Электрокамин Real Flame Urban",
+            brand: "Real Flame",
+            price: 599,
+            description: "Декоративный камин",
+            features: ["2 кВт", "3D пламя", "Термостат", "Пульт ДУ"],
+            rating: 4.6,
+            image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop"
+        },
+        {
+            id: 25,
+            name: "Проектор Epson EH-TW7400",
+            brand: "Epson",
+            price: 2499,
+            description: "4K проектор",
+            features: ["4K", "3000 люмен", "100000:1", "Лампа 5000 ч"],
             rating: 4.7,
-            stock: 3
+            image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=400&h=300&fit=crop"
+        },
+        {
+            id: 26,
+            name: "Игровая консоль PlayStation 5",
+            brand: "Sony",
+            price: 1999,
+            description: "Игровая консоль нового поколения",
+            features: ["825 ГБ SSD", "4K 120fps", "Ray Tracing", "DualSense"],
+            rating: 4.9,
+            image: "https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&h=300&fit=crop"
+        },
+        {
+            id: 27,
+            name: "Умная колонка Яндекс Станция",
+            brand: "Яндекс",
+            price: 199,
+            description: "Управление голосом Алиса",
+            features: ["Алиса", "Bluetooth", "Wi-Fi", "Умный дом"],
+            rating: 4.5,
+            image: "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&h=300&fit=crop"
+        },
+        {
+            id: 28,
+            name: "Настольная лампа Xiaomi Mi",
+            brand: "Xiaomi",
+            price: 79,
+            description: "Смарт лампа с регулировкой",
+            features: ["RGB подсветка", "Приложение", "Таймер", "Ночник"],
+            rating: 4.4,
+            image: "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400&h=300&fit=crop"
+        },
+        {
+            id: 29,
+            name: "Электронные весы Beurer GS 27",
+            brand: "Beurer",
+            price: 89,
+            description: "Напольные весы с анализатором",
+            features: ["До 180 кг", "Анализ тела", "Память 8 пользователей", "Стеклянная платформа"],
+            rating: 4.3,
+            image: "https://images.unsplash.com/photo-1530133532239-eda6f53fcf0f?w=400&h=300&fit=crop"
+        },
+        {
+            id: 30,
+            name: "Массажер для шеи и плеч",
+            brand: "Medisana",
+            price: 129,
+            description: "Инфракрасный массажер",
+            features: ["Инфракрасный нагрев", "8 массажных головок", "3 режима", "Таймер"],
+            rating: 4.2,
+            image: "https://images.unsplash.com/photo-1544161515-944e4c8a5c5e?w=400&h=300&fit=crop"
+        }
+    ],
+    
+    // =========== МОБИЛЬНОСТЬ (15 товаров) ===========
+    'Мобильность': [
+        {
+            id: 31,
+            name: "Электросамокат Xiaomi Mi Scooter 3",
+            brand: "Xiaomi",
+            price: 799,
+            oldPrice: 899,
+            description: "Запас хода 30 км",
+            features: ["30 км", "25 км/ч", "300 Вт", "13.2 кг"],
+            rating: 4.3,
+            image: "https://images.unsplash.com/photo-1579445710183-f9a8161a6c9c?w=400&h=300&fit=crop"
+        },
+        {
+            id: 32,
+            name: "Электровелосипед Xiaomi Himo C20",
+            brand: "Xiaomi",
+            price: 1499,
+            description: "Складной, 80 км запас",
+            features: ["80 км", "25 км/ч", "Складной", "24 кг"],
+            rating: 4.5,
+            image: "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=400&h=300&fit=crop"
+        },
+        {
+            id: 33,
+            name: "Электроскутер Ninebot MAX G30P",
+            brand: "Ninebot",
+            price: 1199,
+            description: "65 км запас хода",
+            features: ["65 км", "30 км/ч", "350 Вт", "19.1 кг"],
+            rating: 4.7,
+            image: "https://images.unsplash.com/photo-1579445710183-f9a8161a6c9c?w=400&h=300&fit=crop"
+        },
+        {
+            id: 34,
+            name: "Гироскутер Smart Balance 10",
+            brand: "Smart Balance",
+            price: 399,
+            description: "10 дюймов, Bluetooth",
+            features: ["10 дюймов", "Bluetooth", "2 ч зарядка", "LED подсветка"],
+            rating: 4.1,
+            image: "https://images.unsplash.com/photo-1579445710183-f9a8161a6c9c?w=400&h=300&fit=crop"
+        },
+        {
+            id: 35,
+            name: "Моноколесо InMotion V8F",
+            brand: "InMotion",
+            price: 1299,
+            description: "30 км запас, подсветка",
+            features: ["30 км", "30 км/ч", "Подсветка", "14 кг"],
+            rating: 4.4,
+            image: "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=400&h=300&fit=crop"
+        },
+        {
+            id: 36,
+            name: "Электромотоцикл Zero FX",
+            brand: "Zero",
+            price: 7999,
+            description: "Мощный электромотоцикл",
+            features: ["100 км", "46 л.с.", "5.3 с до 100", "Мощный"],
+            rating: 4.9,
+            image: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=400&h=300&fit=crop"
+        },
+        {
+            id: 37,
+            name: "Детский электромобиль Mercedes",
+            brand: "Mercedes",
+            price: 699,
+            description: "С пультом управления",
+            features: ["3-7 лет", "6 км/ч", "Пульт ДУ", "25 кг"],
+            rating: 4.6,
+            image: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=400&h=300&fit=crop"
+        },
+        {
+            id: 38,
+            name: "Электроскейт Mellow Board",
+            brand: "Mellow",
+            price: 899,
+            description: "Электрический скейтборд",
+            features: ["15 км", "40 км/ч", "Бесшумный", "7 кг"],
+            rating: 4.2,
+            image: "https://images.unsplash.com/photo-1574926054530-540288c8e5b5?w=400&h=300&fit=crop"
+        },
+        {
+            id: 39,
+            name: "Электровелосипед горный Cube",
+            brand: "Cube",
+            price: 2999,
+            description: "Горный с амортизацией",
+            features: ["120 км", "250 Вт", "Амортизация", "22 кг"],
+            rating: 4.8,
+            image: "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=400&h=300&fit=crop"
+        },
+        {
+            id: 40,
+            name: "Электросамокат Dualtron Ultra",
+            brand: "Dualtron",
+            price: 2499,
+            description: "Мощный, 100 км запас",
+            features: ["100 км", "70 км/ч", "5400 Вт", "Двойной мотор"],
+            rating: 4.9,
+            image: "https://images.unsplash.com/photo-1579445710183-f9a8161a6c9c?w=400&h=300&fit=crop"
+        },
+        {
+            id: 41,
+            name: "Сигвей Ninebot S",
+            brand: "Ninebot",
+            price: 599,
+            description: "Персональный транспортер",
+            features: ["30 км", "20 км/ч", "Самобалансировка", "13.5 кг"],
+            rating: 4.3,
+            image: "https://images.unsplash.com/photo-1579445710183-f9a8161a6c9c?w=400&h=300&fit=crop"
+        },
+        {
+            id: 42,
+            name: "Электровелосипед Scott",
+            brand: "Scott",
+            price: 3499,
+            description: "Горный премиум класса",
+            features: ["150 км", "Bosch мотор", "Гидравлические тормоза", "Алюминиевая рама"],
+            rating: 4.8,
+            image: "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=400&h=300&fit=crop"
+        },
+        {
+            id: 43,
+            name: "Электросамокат для детей",
+            brand: "Razor",
+            price: 299,
+            description: "Детский электросамокат",
+            features: ["До 12 лет", "15 км/ч", "Складной", "Легкий"],
+            rating: 4.2,
+            image: "https://images.unsplash.com/photo-1579445710183-f9a8161a6c9c?w=400&h=300&fit=crop"
+        },
+        {
+            id: 44,
+            name: "Электроскутер Xiaomi Pro 2",
+            brand: "Xiaomi",
+            price: 899,
+            description: "Улучшенная модель",
+            features: ["45 км", "25 км/ч", "Регенеративное торможение", "Дисковые тормоза"],
+            rating: 4.5,
+            image: "https://images.unsplash.com/photo-1579445710183-f9a8161a6c9c?w=400&h=300&fit=crop"
+        },
+        {
+            id: 45,
+            name: "Электровелосипед складной",
+            brand: "Ardis",
+            price: 999,
+            description: "Компактный складной",
+            features: ["50 км", "Складной", "250 Вт", "20 кг"],
+            rating: 4.3,
+            image: "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=400&h=300&fit=crop"
         }
     ]
 };
@@ -208,24 +500,26 @@ function displayProducts(category = 'all') {
         const productCard = document.createElement('div');
         productCard.className = 'product-card';
         
-        // Создаем HTML для товара
+        // Создаем HTML для товара с КАРТИНКОЙ
         productCard.innerHTML = `
             <div class="product-image">
-                <i class="fas fa-box"></i>
+                <img src="${product.image}" alt="${product.name}" loading="lazy">
+                ${product.oldPrice ? '<div class="sale-badge">АКЦИЯ</div>' : ''}
             </div>
             <div class="product-info">
                 <h3 class="product-title">${product.name}</h3>
                 <div class="product-brand">Бренд: ${product.brand}</div>
+                <p class="product-description">${product.description}</p>
                 <div class="product-price">
                     <span class="current-price">${product.price} руб.</span>
                     ${product.oldPrice ? `<span class="old-price">${product.oldPrice} руб.</span>` : ''}
                 </div>
                 <div class="product-features">
-                    ${product.features.map(feature => `<span>${feature}</span>`).join('')}
+                    ${product.features.map(feature => `<span class="feature-tag">${feature}</span>`).join('')}
                 </div>
                 <div class="product-rating">
                     ${'★'.repeat(Math.floor(product.rating))}${'☆'.repeat(5 - Math.floor(product.rating))}
-                    <span>${product.rating}</span>
+                    <span class="rating-value">${product.rating}</span>
                 </div>
                 <button class="add-to-cart" onclick="addToCart(${product.id})">
                     <i class="fas fa-cart-plus"></i> В корзину
@@ -274,8 +568,74 @@ function addToCart(productId) {
     }
     
     if (foundProduct) {
-        alert(`Товар "${foundProduct.name}" добавлен в корзину!`);
-        // Здесь можно добавить логику для реальной корзины
+        // Показываем красивое уведомление
+        showNotification(`"${foundProduct.name}" добавлен в корзину!`);
+        
+        // Сохраняем в localStorage
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existingItem = cart.find(item => item.id === productId);
+        
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push({
+                id: foundProduct.id,
+                name: foundProduct.name,
+                price: foundProduct.price,
+                image: foundProduct.image,
+                quantity: 1
+            });
+        }
+        
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCounter();
+    }
+}
+
+// Функция для показа уведомлений
+function showNotification(message) {
+    // Удаляем старое уведомление
+    const oldNotification = document.querySelector('.notification');
+    if (oldNotification) oldNotification.remove();
+    
+    // Создаем новое уведомление
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.innerHTML = `
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span>${message}</span>
+            <button class="notification-close">&times;</button>
+        </div>
+    `;
+    
+    document.body.appendChild(notification);
+    
+    // Показываем с анимацией
+    setTimeout(() => notification.classList.add('show'), 10);
+    
+    // Закрытие по клику
+    notification.querySelector('.notification-close').addEventListener('click', () => {
+        notification.classList.remove('show');
+        setTimeout(() => notification.remove(), 300);
+    });
+    
+    // Автоматическое скрытие
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => notification.remove(), 300);
+    }, 3000);
+}
+
+// Функция обновления счетчика корзины
+function updateCartCounter() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    
+    const cartCounter = document.querySelector('.cart-count');
+    if (cartCounter) {
+        cartCounter.textContent = totalItems;
+        cartCounter.style.display = totalItems > 0 ? 'inline-block' : 'none';
     }
 }
 
@@ -287,8 +647,144 @@ document.addEventListener('DOMContentLoaded', function() {
     // Настраиваем фильтры
     setupCategoryFilters();
     
-    // Остальной ваш код...
+    // Обновляем счетчик корзины
+    updateCartCounter();
+    
+    // Добавляем стили для товаров
+    addProductStyles();
 });
 
+// Добавляем стили для товаров
+function addProductStyles() {
+    const style = document.createElement('style');
+    style.textContent = `
+        /* Стили для товаров */
+        #productsGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            height: 220px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            background: #f8f9fa;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .sale-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ff4444;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            color: #333;
+            line-height: 1.4;
+        }
+        
+        .product-brand {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            min-height: 42px;
+        }
+        
+        .product-price {
+            margin: 15px 0;
+        }
+        
+        .current-price {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+            display: block;
+        }
+        
+        .old-price {
+            font-size: 16px;
+            color: #999;
+            text-decoration: line-through;
+            margin-left: 10px;
+        }
+        
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-tag {
+            background: #f1f3f4;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+            color: #ffc107;
+        }
+        
+        .rating-value {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .add-to-cart {
+            width: 100%;
+            padding:
 
 
