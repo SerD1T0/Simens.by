@@ -9,6 +9,233 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Стили для товаров */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            height: 200px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            background: #f8f9fa;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .sale-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #ff4444;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            color: #333;
+            line-height: 1.4;
+            height: 45px;
+            overflow: hidden;
+        }
+        
+        .product-brand {
+            color: #888;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        
+        .product-description {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            height: 42px;
+            overflow: hidden;
+        }
+        
+        .product-price {
+            margin: 15px 0;
+        }
+        
+        .current-price {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+            display: block;
+        }
+        
+        .old-price {
+            font-size: 16px;
+            color: #999;
+            text-decoration: line-through;
+            margin-bottom: 5px;
+            display: block;
+        }
+        
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-tag {
+            background: #f8f9fa;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+            color: #666;
+        }
+        
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 15px;
+            color: #ffc107;
+        }
+        
+        .rating-value {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .add-to-cart {
+            width: 100%;
+            padding: 12px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+        
+        .add-to-cart:hover {
+            background: #218838;
+        }
+        
+        .add-to-cart:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        
+        /* Кнопки фильтрации */
+        .products-filters {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover {
+            border-color: #007bff;
+            color: #007bff;
+        }
+        
+        .filter-btn.active {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+        
+        /* Уведомления */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-width: 300px;
+            transform: translateX(150%);
+            transition: transform 0.3s ease;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        .notification-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0;
+            margin-left: 15px;
+        }
+        
+        /* Счетчик товаров */
+        .products-counter {
+            text-align: center;
+            font-size: 16px;
+            color: #666;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
     <!-- Хедер -->
@@ -51,9 +278,9 @@
                     </nav>
 
                     <div class="header-actions">
-                        <a href="#cart" class="cart-button">
+                        <a href="javascript:void(0)" class="cart-button" onclick="showCart()">
                             <i class="fas fa-shopping-cart"></i>
-                            <span class="cart-count">0</span>
+                            <span class="cart-count" id="cart-count">0</span>
                             <span class="cart-text">Корзина</span>
                         </a>
                     </div>
@@ -160,6 +387,31 @@
         </div>
     </section>
 
+    <!-- Популярные товары -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2 class="section-title">Рекомендуемые товары</h2>
+            
+            <!-- Фильтры -->
+            <div class="products-filters">
+                <button class="filter-btn active" data-category="all">Все товары</button>
+                <button class="filter-btn" data-category="Для кухни">Для кухни</button>
+                <button class="filter-btn" data-category="Для дома">Для дома</button>
+                <button class="filter-btn" data-category="Мобильность">Мобильность</button>
+            </div>
+            
+            <!-- Счетчик товаров -->
+            <div class="products-counter">
+                Найдено товаров: <span id="products-counter">45</span>
+            </div>
+            
+            <!-- Сетка товаров -->
+            <div class="products-grid" id="products-grid">
+                <!-- Товары будут добавляться через JavaScript -->
+            </div>
+        </div>
+    </section>
+
     <!-- Преимущества -->
     <section class="advantages-section">
         <div class="container">
@@ -247,17 +499,6 @@
                 </div>
 
                 <p class="principles-note">На все товары есть официальные гарантии от производителя - мы работаем только с проверенными поставщиками более 15 лет!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Популярные товары -->
-    <section class="products-section" id="products">
-        <div class="container">
-            <h2 class="section-title">Рекомендуемые товары</h2>
-            
-            <div class="products-grid">
-                <!-- Товары будут добавляться через JavaScript -->
             </div>
         </div>
     </section>
@@ -521,6 +762,98 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <!-- JavaScript с товарами -->
+    <script>
+        // БАЗА ДАННЫХ ТОВАРОВ (45 товаров)
+        const productsDatabase = {
+            'Для кухни': [
+                {
+                    id: 1,
+                    name: "Холодильник Samsung RB37A520NSA",
+                    brand: "Samsung",
+                    price: 2249,
+                    oldPrice: 2499,
+                    description: "Двухкамерный с No Frost",
+                    features: ["No Frost", "367 л", "Инвертор", "A+ класс"],
+                    rating: 4.7,
+                    image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?w=400&h=300&fit=crop"
+                },
+                {
+                    id: 2,
+                    name: "Стиральная машина LG F2J3WS2W",
+                    brand: "LG",
+                    price: 1599,
+                    description: "Фронтальная загрузка 6 кг",
+                    features: ["6 кг", "1200 об/мин", "A+++", "Прямой привод"],
+                    rating: 4.5,
+                    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop"
+                },
+                {
+                    id: 3,
+                    name: "Посудомоечная машина Bosch SMV25AX00R",
+                    brand: "Bosch",
+                    price: 1899,
+                    oldPrice: 2099,
+                    description: "Встраиваемая на 9 комплектов",
+                    features: ["9 комплектов", "48 дБ", "5 программ", "A++"],
+                    rating: 4.6,
+                    image: "https://images.unsplash.com/photo-1620791144176-2c64c2c5e383?w=400&h=300&fit=crop"
+                },
+                {
+                    id: 4,
+                    name: "Микроволновая печь Samsung ME83KRW-1",
+                    brand: "Samsung",
+                    price: 299,
+                    description: "23 литра, 800 Вт",
+                    features: ["23 л", "800 Вт", "Электронное управление", "6 уровней"],
+                    rating: 4.1,
+                    image: "https://images.unsplash.com/photo-1615551043360-33de8b5f410c?w=400&h=300&fit=crop"
+                },
+                {
+                    id: 5,
+                    name: "Варочная панель Bosch PKE645B17E",
+                    brand: "Bosch",
+                    price: 499,
+                    description: "Индукционная, 4 зоны",
+                    features: ["Индукционная", "4 конфорки", "Сенсор", "Защита"],
+                    rating: 4.6,
+                    image: "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&h=300&fit=crop"
+                },
+                {
+                    id: 6,
+                    name: "Кофемашина De'Longhi Magnifica S",
+                    brand: "De'Longhi",
+                    price: 1499,
+                    oldPrice: 1699,
+                    description: "Автоматическая с кофемолкой",
+                    features: ["15 бар", "Встроенная кофемолка", "1.8 л", "Капучино"],
+                    rating: 4.7,
+                    image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop"
+                },
+                {
+                    id: 7,
+                    name: "Духовой шкаф Bosch HBA534BS0R",
+                    brand: "Bosch",
+                    price: 899,
+                    description: "Электрический, 67 литров",
+                    features: ["67 л", "7 программ", "Самоочистка", "Таймер"],
+                    rating: 4.5,
+                    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop"
+                },
+                {
+                    id: 8,
+                    name: "Холодильник ATLANT ХМ 4623",
+                    brand: "ATLANT",
+                    price: 1299,
+                    description: "Двухкамерный, 335 литров",
+                    features: ["335 л", "Частичный No Frost", "A+", "Экономный"],
+                    rating: 4.3,
+                    image: "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&h=300&fit=crop"
+                },
+                {
+                    id: 9,
+                    name: "Морозильник Бирюса 125",
+                    brand: "Бирюса",
+                    price: 799,
+                    description: "Морозильный ларь",
+                    features: ["125 л", "4 звезды", "Ручная раз
